@@ -1,37 +1,34 @@
-# 🌍 Hosturi Minecraft Gratuite
+# 🌍 Minehant - Hosting Minecraft Gratuit
 
-Acest proiect conține o listă actualizată cu servicii gratuite de găzduire pentru servere Minecraft.  
-💡 Perfect pentru cei care vor să-și creeze propriul server fără costuri!
-
----
-
-## 🔗 Demo
-📌 **Site-ul oficial:** *(linkul va apărea după activarea GitHub Pages)*
+**Minehant** este un serviciu gratuit de găzduire pentru servere Minecraft, ideal pentru comunități mici și prieteni care vor să se joace împreună.  
+Oferim panou de control modern, instalare rapidă și suport pentru pluginuri și modpack-uri.
 
 ---
 
-## 🖥️ Hosturi disponibile
-
-### 1. ![Aternos Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Aternos_Logo.png/200px-Aternos_Logo.png)  
-**[Aternos](https://aternos.org/)** – Host gratuit, ușor de folosit, ideal pentru servere survival și creativ.
-
----
-
-### 2. ![FalixNodes Logo](https://falixnodes.net/img/logo-text.svg)  
-**[FalixNodes](https://falixnodes.net/)** – Hosting Minecraft gratuit cu panou de control modern și multe funcții.
+## 🚀 Funcționalități
+- 🖥️ Panou de control modern
+- ⚡ Instalare instant
+- 📦 Suport pentru pluginuri și modpack-uri
+- 🌍 Locații multiple de server
+- 🔒 Protecție DDoS inclusă
 
 ---
 
-### 3. ![Minehut Logo](https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0f/Minehut_logo.png)  
-**[Minehut](https://minehut.com/)** – Gratuit până la 10 jucători, suport pentru pluginuri și configurare rapidă.
+## 📸 Capturi de ecran
+*(Aici poți adăuga poze din panou sau din server)*
 
 ---
 
-## ⚙️ Cum folosești
-1. Intră pe site-ul nostru (link mai sus).
-2. Alege hostul potrivit pentru tine.
-3. Creează serverul și invită-ți prietenii!
+## 🛠 Cum să începi
+1. Accesează [site-ul oficial Minehant](#) *(înlocuiește cu linkul GitHub Pages)*.
+2. Creează un cont gratuit.
+3. Configurează serverul după preferințe.
+4. Invită-ți prietenii și începe aventura!
 
 ---
 
 ## 📬 Contact
+📧 Email: **minehant.support@example.com**  
+💬 Discord: *(link Discord dacă vrei)*
+
+---
