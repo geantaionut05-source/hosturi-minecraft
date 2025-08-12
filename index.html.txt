@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosturi Minecraft Gratuite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e1e1e;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #2ecc71;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .host {
+            background: #2c2c2c;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        a {
+            color: #2ecc71;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌍 Hosturi Minecraft Gratuite</h1>
+        <p>Listă actualizată cu cele mai bune opțiuni</p>
+    </header>
+    <main>
+        <div class="host">
+            <h2>Aternos</h2>
+            <p>Host gratuit pentru servere Minecraft, ușor de folosit.</p>
+            <p><a href="https://aternos.org/" target="_blank">Vizitează site-ul</a></p>
+        </div>
+        <div class="host">
+            <h2>FalixNodes</h2>
+            <p>Oferă hosting Minecraft gratuit cu panou de control.</p>
+            <p><a href="https://falixnodes.net/" target="_blank">Vizitează site-ul</a></p>
+        </div>
+        <div class="host">
+            <h2>Minehut</h2>
+            <p>Host gratuit cu până la 10 jucători și pluginuri.</p>
+            <p><a href="https://minehut.com/" target="_blank">Vizitează site-ul</a></p>
+        </div>
+    </main>
+</body>
+</html>
