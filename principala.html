@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planuri Minehant</title>
+  <style>
+    body {
+      background: #0f1113;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(90deg,#00cc77,#00a88a);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      color: #03120b;
+    }
+    main {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .plan {
+      background: #16181a;
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+    }
+    .plan h3 {
+      margin: 6px 0;
+      font-size: 18px;
+    }
+    .price {
+      font-size: 20px;
+      color: #00cc77;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 8px 14px;
+      background: #00cc77;
+      color: #03120b;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #00a88a;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      color: #9aa3ad;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Planuri Minehant - Gratuit până la 5000 GB</h1>
+</header>
+
+<main>
+  <div class="grid" id="plans-container">
+    <!-- Planurile vor fi generate automat -->
+  </div>
+</main>
+
+<footer>
+  © 2025 Minehant - Toate drepturile rezervate
+</footer>
+
+<script>
+  const container = document.getElementById('plans-container');
+
+  for (let i = 1; i <= 5000; i++) {
+    const plan = document.createElement('div');
+    plan.className = 'plan';
+    plan.innerHTML = `
+      <h3>Plan ${i} GB</h3>
+      <div class="price">0€ / lună</div>
+      <div>${i} GB RAM • ${i} GB stocare SSD</div>
+      <a class="btn" href="#">Selectează</a>
+    `;
+    container.appendChild(plan);
+  }
+</script>
+
+</body>
+</html>
