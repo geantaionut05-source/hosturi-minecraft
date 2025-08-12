@@ -2,10 +2,67 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minehant - Test</title>
+    <title>Minehant - Creează Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #00ff99;
+        }
+        button {
+            background-color: #00ff99;
+            color: black;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00cc77;
+        }
+        #ipBox {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ffcc00;
+        }
+    </style>
 </head>
-<body style="font-family: Arial; text-align: center; padding-top: 50px;">
-    <h1>🚀 Site-ul Minehant este online!</h1>
-    <p>Dacă vezi acest mesaj, înseamnă că GitHub Pages funcționează corect.</p>
+<body>
+
+    <h1>Minehant - Creează Server</h1>
+    <p>Apasă butonul pentru a primi un IP de server!</p>
+
+    <button onclick="creeazaServer()">Creează server</button>
+
+    <div id="ipBox"></div>
+
+    <script>
+        // Aici pui adresa unde rulează backend-ul tău Node.js
+        const BACKEND_URL = "https://serverul-tau/creeaza";
+
+        async function creeazaServer() {
+            document.getElementById("ipBox").innerHTML = "⏳ Se generează IP-ul...";
+            try {
+                const response = await fetch(BACKEND_URL);
+                const data = await response.json();
+                if (data.success) {
+                    document.getElementById("ipBox").innerHTML = `✅ IP-ul tău: <b>${data.ip}</b>`;
+                } else {
+                    document.getElementById("ipBox").innerHTML = "❌ Eroare la generare.";
+                    console.error(data.errors);
+                }
+            } catch (err) {
+                document.getElementById("ipBox").innerHTML = "❌ Serverul nu răspunde.";
+                console.error(err);
+            }
+        }
+    </script>
+
 </body>
+</html>
