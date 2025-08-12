@@ -1,0 +1,11 @@
+<script>
+async function genereazaIP() {
+    try {
+        const response = await fetch("https://ADRESA-TA-BACKEND/genereaza-ip");
+        const data = await response.json();
+        document.getElementById("ipBox").innerHTML = `IP-ul tău: <b>${data.ip}</b>`;
+    } catch (err) {
+        document.getElementById("ipBox").innerHTML = "❌ Serverul nu răspunde.";
+    }
+}
+</script>
