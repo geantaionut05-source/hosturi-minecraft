@@ -1,0 +1,19 @@
+<header>
+  <div class="brand">
+    <img src="minehant-logo.png" alt="Minehant logo" onerror="this.style.display='none'">
+    <div>
+      <h1>Minehant</h1>
+      <p class="lead">Hosting Minecraft Gratuit — încearcă planul Free azi</p>
+    </div>
+  </div>
+
+  <nav style="margin-top:10px; text-align:center;">
+    <a href="index.html" style="color:white; margin:0 10px;">Acasă</a>
+    <a href="planuri.html" style="color:white; margin:0 10px;">Planuri</a>
+    <a href="contact.html" style="color:white; margin:0 10px;">Contact</a>
+  </nav>
+
+  <p class="small" style="margin-top:10px;color:#04281f;">
+    Site demonstrativ — pentru hosting real e nevoie de VPS și panou (vezi secțiunea de implementare).
+  </p>
+</header>
