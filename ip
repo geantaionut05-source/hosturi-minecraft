@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Minehant - Creează Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #00ff99;
+        }
+        button {
+            background-color: #00ff99;
+            color: black;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00cc77;
+        }
+        #ipBox {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Minehant - Creează Server</h1>
+    <p>Apasă butonul pentru a primi un IP de server!</p>
+
+    <button onclick="genereazaIP()">Creează server</button>
+
+    <div id="ipBox"></div>
+
+    <script>
+        function genereazaIP() {
+            const prefixe = ["mc", "sv", "play", "node", "srv"];
+            const randomPrefix = prefixe[Math.floor(Math.random() * prefixe.length)];
+            const randomNum = Math.floor(Math.random() * 900) + 100; // 100-999
+            const domeniu = "minehant.net";
+            const porturi = [25565, 19132, 25575];
+            const randomPort = porturi[Math.floor(Math.random() * porturi.length)];
+
+            const ip = `${randomPrefix}${randomNum}.${domeniu}:${randomPort}`;
+            document.getElementById("ipBox").innerHTML = `IP-ul tău: <b>${ip}</b>`;
+        }
+    </script>
+
+</body>
+</html>
