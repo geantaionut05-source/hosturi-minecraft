@@ -1,19 +1,22 @@
 import fetch from "node-fetch";
 
-// CONFIG
-const ZONE_ID = "ZONE_ID_DE_LA_TINE";
-const API_TOKEN = "TOKEN_API_DE_LA_TINE";
-const DOMENIU = "minehant.gq";
-const IP_SERVER = "127.0.0.1"; // IP-ul real al serverului
+const ZONE_ID = "PUNE_ZONE_ID_AICI";
+const API_TOKEN = "PUNE_API_TOKEN_AICI";
+const domeniu = "minehant.gq";
 
-// Generează subdomeniu random
-const prefixe = ["mc", "sv", "play", "node", "srv"];
-const prefix = prefixe[Math.floor(Math.random() * prefixe.length)];
-const numar = Math.floor(Math.random() * 900) + 100;
-const subdomeniu = `${prefix}${numar}`;
+function genereazaSubdomeniu() {
+    const prefixe = ["mc", "sv", "play", "node", "srv"];
+    const randomPrefix = prefixe[Math.floor(Math.random() * prefixe.length)];
+    const randomNum = Math.floor(Math.random() * 900) + 100;
+    return `${randomPrefix}${randomNum}`;
+}
 
-// Trimite cererea către Cloudflare
 async function creeazaDNS() {
+    const subdomeniu = genereazaSubdomeniu();
+    const porturi = [25565, 19132, 25575];
+    const randomPort = porturi[Math.floor(Math.random() * porturi.length)];
+    const ipServer = "127.0.0.1"; // aici pui IP-ul real al serverului
+
     const response = await fetch(`https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/dns_records`, {
         method: "POST",
         headers: {
@@ -22,19 +25,17 @@ async function creeazaDNS() {
         },
         body: JSON.stringify({
             type: "A",
-            name: `${subdomeniu}.${DOMENIU}`,
-            content: IP_SERVER,
-            ttl: 120,
-            proxied: false
+            name: `${subdomeniu}.${domeniu}`,
+            content: ipServer,
+            ttl: 120
         })
     });
 
     const data = await response.json();
-
     if (data.success) {
-        console.log(`✅ IP creat: ${subdomeniu}.${DOMENIU}:25565`);
+        console.log(`✅ IP-ul tău: ${subdomeniu}.${domeniu}:${randomPort}`);
     } else {
-        console.error("❌ Eroare:", data.errors);
+        console.log("❌ Eroare:", data.errors);
     }
 }
 
