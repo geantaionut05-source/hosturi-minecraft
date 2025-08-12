@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Minehant — Planuri gratuite 1–12 GB</title>
+  <meta name="description" content="Minehant - Hosting Minecraft gratuit. Planuri de la 1GB la 12GB RAM, toate gratuite.">
+  <style>
+    :root{
+      --bg:#0f1113;
+      --card:#16181a;
+      --accent:#00cc77;
+      --muted:#9aa3ad;
+      --glass: rgba(255,255,255,0.03);
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      background: linear-gradient(180deg,#0b0c0d 0%, #0f1113 100%);
+      color:#e6eef3;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    header{
+      padding:28px 16px;
+      text-align:center;
+      background:linear-gradient(90deg,var(--accent),#00a88a);
+      color:#03120b;
+    }
+    .wrap{max-width:var(--maxw);margin:24px auto;padding:0 16px;}
+    .brand{display:flex;gap:14px;align-items:center;justify-content:center;}
+    .brand img{width:64px;height:64px;object-fit:contain;border-radius:8px;background:var(--glass);}
+    h1{margin:0;font-size:26px;letter-spacing:1px;}
+    p.lead{margin:6px 0 0;color:#072418;font-weight:600;font-size:14px}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start;margin-top:18px;}
+    @media (max-width:960px){ .grid{grid-template-columns:1fr} .aside{order:2} }
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(0,0,0,0.5);}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Plans grid */
+    .plans-grid{
+      display:grid;
+      grid-template-columns: repeat(3,1fr);
+      gap:14px;
+      margin-top:14px;
+    }
+    @media (max-width:1100px){ .plans-grid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:700px){ .plans-grid{grid-template-columns:1fr} }
+
+    .plan{
+      background:linear-gradient(180deg,#0f1511,#0e1210);
+      border:1px solid rgba(255,255,255,0.03);
+      padding:14px;border-radius:10px;text-align:center;
+    }
+    .plan h3{margin:6px 0 8px;font-size:17px}
+    .price{font-size:20px;color:var(--accent);font-weight:700;margin:6px 0}
+    .specs{color:var(--muted);margin:8px 0 12px;font-size:14px}
+    .btn{display:inline-block;padding:9px 14px;border-radius:8px;background:var(--accent);color:#03120b;text-decoration:none;font-weight:700;
+      box-shadow: 0 6px 18px rgba(0,204,119,0.12);}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)}
+    .badge{display:inline-block;background:rgba(0,0,0,0.25);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:12px}
+
+    .aside .info-list{display:flex;flex-direction:column;gap:10px}
+    .info-item{display:flex;gap:12px;align-items:flex-start}
+    .info-item strong{display:block;color:#fff}
+    footer{margin-top:20px;padding:18px;text-align:center;color:var(--muted)}
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="minehant-logo.png" alt="Minehant logo" onerror="this.style.display='none'">
+      <div>
+        <h1>Minehant</h1>
+        <p class="lead">Planuri gratuite 1 → 12 GB RAM • Stocare: RAM × 2 GB</p>
+      </div>
+    </div>
+    <p class="small" style="margin-top:8px;color:#04281f;">Acest site e demonstrativ. Pentru hosting real ai nevoie de VPS & panou (Pterodactyl).</p>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+      <section class="card">
+        <h2 style="margin-top:0">Planuri disponibile</h2>
+        <p class="muted">Toate planurile sunt afișate ca gratuite (demo). Stocarea afișată = RAM × 2 GB.</p>
+
+        <div class="plans-grid" id="plans">
+          <!-- Plans will be inserted here -->
+          <!-- We'll hardcode 12 plans below -->
+          <div class="plan">
+            <div class="badge">FREE</div>
+            <h3>Plan 1</h3>
+            <div class="price">0€ / lună</div>
+            <div class="specs">1 GB RAM • 2 GB stocare • 5 sloturi</div>
+            <a class="btn ghost" href="#">Alege</a>
+          </div>
+
+          <div class="plan">
+            <div class="badge">FREE</div>
+            <h3>Plan 2</h3>
+            <div class="price">0€ / lună</div>
+            <div class="specs">2 GB RAM • 4 GB stocare • 8 sloturi</div>
+            <a class="btn ghost" href="#">Alege</a>
+          </div>
+
+          <div class="plan">
+            <div class="badge">FREE</div>
+            <h3>Plan 3</h3>
+            <div class="price">0€ / lună</div>
+            <div class="specs">3 GB RAM • 6 GB stocare • 12 sloturi</div>
+            <a class="btn ghost" href="#">Alege</a>
+          </div>
+
+          <div class="plan">
+            <div class="badge">FREE</div>
+            <h3>Plan 4</h3>
+            <div class="price">0€ / lună</div>
+            <div class="specs">4 GB RAM • 8 GB stocare • 16 sloturi</div>
+            <a class="btn ghost" href="#">Alege</a>
+          </div>
+
+          <div class="plan">
+            <div class="badge">FREE</div>
+            <h3>Plan 5</h3>
+            <div class="price">0€ / lună</div>
+            <div class="specs">5 GB RAM • 10 GB stocare • 20 sloturi</div>
+            <a class="btn ghost" href="#">Alege</a>
+          </div>
+
+          <div class="plan">
+            <div class="badge">FREE</div>
+            <h3>Plan 6</h3>
+            <div class="price">0€ / lună</div>
+            <div class="specs">6 GB RAM • 12 GB stocare • 24 sloturi</div>
+            <a class="btn ghost" href="#">Alege</a>
+          </div>
+
+          <div class="plan">
+            <div class="badge">FREE</div>
+            <h3>Plan 7</h3>
+            <div class="price">0€ / lună</div>
+            <div class="specs">7 GB RAM • 14 GB stocare • 28 sloturi</div>
+            <a class="btn ghost" href="#">Alege</a>
+          </div>
+
+          <div class="plan">
+            <div class="badge">FREE</div>
+            <h3>Plan 8</h3>
+            <div class="price">0€ / lună</div>
+            <div class="specs">8 GB RAM • 16 GB stocare • 32 sloturi</div>
+            <a class="btn ghost" href="#">Alege</a>
+          </div>
+
+          <div class="plan">
+            <div class="badge">FREE</div>
+            <h3>Plan 9</h3>
+            <div class="price">0€ / lună</div>
+            <div class="specs">9 GB RAM • 18 GB stocare • 36 sloturi</div>
+            <a class="btn ghost" href="#">Alege</a>
+          </div>
+
+          <div class="plan">
+            <div class="badge">FREE</div>
+            <h3>Plan 10</h3>
+            <div class="price">0€ / lună</div>
+            <div class="specs">10 GB RAM • 20 GB stocare • 40 sloturi</div>
+            <a class="btn ghost" href="#">Alege</a>
+          </div>
+
+          <div class="plan">
+            <div class="badge">FREE</div>
+            <h3>Plan 11</h3>
+            <div class="price">0€ / lună</div>
+            <div class="specs">11 GB RAM • 22 GB stocare • 44 sloturi</div>
+            <a class="btn ghost" href="#">Alege</a>
+          </div>
+
+          <div class="plan">
+            <div class="badge">FREE MAX</div>
+            <h3>Plan 12</h3>
+            <div class="price">0€ / lună</div>
+            <div class="specs">12 GB RAM • 24 GB stocare • 48 sloturi</div>
+            <a class="btn ghost" href="#">Alege</a>
+          </div>
+
+        </div>
+      </section>
+
+      <aside class="card aside">
+        <h3>Implementare tehnică (scurt)</h3>
+        <div class="info-list" style="margin-top:12px;">
+          <div class="info-item">
+            <div>
+              <strong>VPS / Server</strong>
+              <div class="small">Pentru a oferi aceste planuri efectiv, ai nevoie de resurse fizice (VPS/dedicat) și de un sistem de gestionare (Pterodactyl).</div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div>
+              <strong>Limite</strong>
+              <div class="small">Configurează limitele de RAM și Disk în panoul Pterodactyl (ex: Disk limit = RAM × 2 GB).</div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div>
+              <strong>Backups</strong>
+              <div class="small">Backup-urile ocupă spațiu — planifică stocare suplimentară pentru copii de siguranță.</div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div>
+              <strong>Notă</strong>
+              <div class="small">Acest site/plan este demonstrativ. Trebuie să ai infrastructura reală pentru a oferi efectiv aceste planuri.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;text-align:center">
+          <a class="btn" href="#" style="width:100%">Creează-ți cont (demo)</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    © Minehant • Planuri demo (1–12 GB) • Stocare = RAM × 2 GB
+  </footer>
+</body>
+</html>
