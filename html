@@ -1,0 +1,7 @@
+<script>
+async function creeazaServer() {
+    const raspuns = await fetch("https://LINK-RENDER-APP/gen-ip");
+    const data = await raspuns.json();
+    document.getElementById("ipBox").innerHTML = `IP-ul tău: <b>${data.ip}</b>`;
+}
+</script>
