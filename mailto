@@ -1,0 +1,204 @@
+ <!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Minehant — Planuri 1–12 GB (Gratis)</title>
+  <meta name="description" content="Minehant - Hosting Minecraft gratuit. Planuri de la 1GB la 12GB RAM, stocare = RAM × 10 GB.">
+  <style>
+    :root{
+      --bg:#0f1113; --card:#16181a; --accent:#00cc77; --muted:#9aa3ad; --glass: rgba(255,255,255,0.03);
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,#0b0c0d,#0f1113);color:#e6eef3}
+    header{padding:28px 16px;text-align:center;background:linear-gradient(90deg,var(--accent),#00a88a);color:#03120b}
+    .wrap{max-width:var(--maxw);margin:24px auto;padding:0 16px}
+    .brand{display:flex;gap:14px;align-items:center;justify-content:center}
+    .brand img{width:64px;height:64px;object-fit:contain;border-radius:8px;background:var(--glass)}
+    h1{margin:0;font-size:26px}
+    p.lead{margin:6px 0 0;color:#072418;font-weight:600;font-size:14px}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start;margin-top:18px}
+    @media (max-width:960px){.grid{grid-template-columns:1fr}.aside{order:2}}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(0,0,0,0.5)}
+    .muted{color:var(--muted);font-size:14px}
+    .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+    @media (max-width:1100px){.plans-grid{grid-template-columns:repeat(2,1fr)}}@media (max-width:700px){.plans-grid{grid-template-columns:1fr}}
+    .plan{background:linear-gradient(180deg,#0f1511,#0e1210);border:1px solid rgba(255,255,255,0.03);padding:14px;border-radius:10px;text-align:center}
+    .plan h3{margin:6px 0 8px;font-size:17px}
+    .price{font-size:18px;color:var(--accent);font-weight:700;margin:6px 0}
+    .specs{color:var(--muted);margin:8px 0 12px;font-size:14px}
+    .btn{display:inline-block;padding:9px 14px;border-radius:8px;background:var(--accent);color:#03120b;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(0,204,119,0.12);cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)}
+    .badge{display:inline-block;background:rgba(0,0,0,0.25);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:12px}
+    .aside .info-list{display:flex;flex-direction:column;gap:10px}
+    .info-item{display:flex;gap:12px;align-items:flex-start}
+    .info-item strong{display:block;color:#fff}
+    footer{margin-top:20px;padding:18px;text-align:center;color:var(--muted)}
+    /* Modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:none;align-items:center;justify-content:center;padding:20px;z-index:60}
+    .modal{background:#0e1112;border-radius:10px;padding:18px;max-width:520px;width:100%;box-shadow:0 10px 40px rgba(0,0,0,0.6)}
+    .modal h3{margin:0 0 8px}
+    .form-row{display:flex;gap:8px;margin-bottom:10px}
+    .form-row .col{flex:1}
+    input[type="text"], input[type="email"], select, textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:#0c0e0f;color:#eaf3ef}
+    textarea{min-height:90px;resize:vertical}
+    .close-btn{background:transparent;border:0;color:var(--muted);cursor:pointer;font-size:14px}
+    .success{background:linear-gradient(90deg,#093a1f,#0b2a1f);padding:12px;border-radius:8px;color:#aef0c9;margin-top:10px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="minehant-logo.png" alt="Minehant logo" onerror="this.style.display='none'">
+      <div>
+        <h1>Minehant</h1>
+        <p class="lead">Planuri gratuite 1 → 12 GB RAM • Stocare = RAM × 10 GB • Sloturi = RAM × 4</p>
+      </div>
+    </div>
+    <p class="small" style="margin-top:8px;color:#04281f">Site demonstrativ. Pentru servicii reale ai nevoie de VPS & Pterodactyl.</p>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+      <section class="card">
+        <h2 style="margin-top:0">Alege un plan</h2>
+        <p class="muted">Toate planurile afișate sunt demo și gratuite — formularul de comandă deschide clientul tău de email.</p>
+        <div class="plans-grid" id="plansGrid"></div>
+      </section>
+
+      <aside class="card aside">
+        <h3>Implementare tehnică (scurt)</h3>
+        <div class="info-list" style="margin-top:12px">
+          <div class="info-item"><div><strong>VPS / Server</strong><div class="small">Resurse reale necesare pentru a onora planurile.</div></div></div>
+          <div class="info-item"><div><strong>Panou</strong><div class="small">Folosește Pterodactyl pentru management & limitări (disk, RAM).</div></div></div>
+          <div class="info-item"><div><strong>Backups</strong><div class="small">Backup-urile ocupă spațiu — planifică＋stocare.</div></div></div>
+        </div>
+        <div style="margin-top:16px;text-align:center">
+          <a class="btn" href="#" id="demoSignup">Creează-ți cont (demo)</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>© Minehant • Planuri demo (1–12 GB) • Stocare = RAM × 10 GB • Sloturi = RAM × 4</footer>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="modal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <h3 id="modalTitle">Comandă plan</h3>
+        <button class="close-btn" id="closeModal">✕ Închide</button>
+      </div>
+      <form id="orderForm">
+        <div class="form-row">
+          <div class="col"><input type="text" id="fullName" placeholder="Nume complet" required></div>
+          <div class="col"><input type="email" id="email" placeholder="Email" required></div>
+        </div>
+        <div style="margin-bottom:10px">
+          <label for="planSelect" class="small">Plan selectat</label>
+          <select id="planSelect"></select>
+        </div>
+        <div style="margin-bottom:10px">
+          <label class="small">Mesaj (opțional)</label>
+          <textarea id="message" placeholder="Detalii (ex: numele serverului, preferințe pluginuri)"></textarea>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button type="submit" class="btn">Trimite comandă</button>
+          <button type="button" class="btn ghost" id="clearForm">Curăță</button>
+        </div>
+        <div id="formResult" style="margin-top:12px"></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // generate plans 1..12
+    const plansGrid = document.getElementById('plansGrid');
+    const planSelect = document.getElementById('planSelect');
+    const modal = document.getElementById('modal');
+    const closeModal = document.getElementById('closeModal');
+    const orderForm = document.getElementById('orderForm');
+    const formResult = document.getElementById('formResult');
+    const demoSignup = document.getElementById('demoSignup');
+    const clearFormBtn = document.getElementById('clearForm');
+
+    function createPlanCard(ram){
+      const storage = ram * 10; // GB
+      const slots = ram * 4;
+      const div = document.createElement('div');
+      div.className = 'plan';
+      div.innerHTML = `
+        <div class="badge">FREE</div>
+        <h3>Plan ${ram} GB</h3>
+        <div class="price">0€ / lună</div>
+        <div class="specs">${ram} GB RAM • ${storage} GB stocare • ${slots} sloturi</div>
+        <button class="btn ghost" data-plan="${ram}">Comandă</button>
+      `;
+      const btn = div.querySelector('button');
+      btn.addEventListener('click', ()=>openModal(ram));
+      return div;
+    }
+
+    function openModal(ram){
+      modal.style.display='flex';
+      // populate select and preselect
+      planSelect.innerHTML = '';
+      for(let r=1;r<=12;r++){
+        const opt = document.createElement('option');
+        opt.value = r;
+        opt.textContent = `Plan ${r} GB — ${r*10} GB stocare • ${r*4} sloturi`;
+        if(r===ram) opt.selected = true;
+        planSelect.appendChild(opt);
+      }
+      document.getElementById('fullName').focus();
+    }
+
+    function closeModalFn(){
+      modal.style.display='none';
+      formResult.innerHTML = '';
+      orderForm.reset();
+    }
+
+    // initialize grid
+    for(let i=1;i<=12;i++){
+      plansGrid.appendChild(createPlanCard(i));
+    }
+
+    // modal events
+    closeModal.addEventListener('click', closeModalFn);
+    window.addEventListener('click', (e)=>{ if(e.target===modal) closeModalFn(); });
+    demoSignup.addEventListener('click', (e)=>{ e.preventDefault(); openModal(1); });
+
+    clearFormBtn.addEventListener('click', ()=> orderForm.reset());
+
+    orderForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const plan = planSelect.value;
+      const message = document.getElementById('message').value.trim();
+      if(!name||!email){ formResult.innerHTML = '<div class="success">Completează nume și email.</div>'; return; }
+
+      // build email body
+      const subj = encodeURIComponent(`Comandă Minehant - Plan ${plan} GB`);
+      const bodyLines = [
+        `Nume: ${name}`,
+        `Email: ${email}`,
+        `Plan dorit: ${plan} GB`,
+        `Stocare: ${plan*10} GB`,
+        `Sloturi: ${plan*4}`,
+        `Mesaj: ${message||'(niciun mesaj)'}`
+      ];
+      const body = encodeURIComponent(bodyLines.join('\n'));
+
+      // open mail client
+      const mailto = `mailto:contact@minehant.example?subject=${subj}&body=${body}`;
+      window.location.href = mailto;
+
+      // show confirmation on page (in caz că user nu trimite)
+      formResult.innerHTML = '<div class="success">S-a generat solicitarea. Clientul tău de email s-a deschis. Dacă nu, copiază datele și trimite manual.</div>';
+    });
+  </script>
+</body>
+</html>
