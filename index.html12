@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minehant - Hosting Minecraft Gratuit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div>
+    <img src="images/minehant-logo.png" alt="Minehant Logo">
+  </div>
+  <nav>
+    <a href="index.html">Acasă</a>
+    <a href="planuri.html">Planuri</a>
+    <a href="despre.html">Despre</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Bun venit la Minehant</h1>
+  <p>Hosting Minecraft 100% gratuit, de la 1GB până la 100GB. Creează-ți serverul astăzi și joacă împreună cu prietenii tăi!</p>
+  <a href="planuri.html" class="btn">Vezi planurile</a>
+</div>
+
+<footer>
+  © 2025 Minehant - Toate drepturile rezervate.
+</footer>
+
+</body>
+</html>
