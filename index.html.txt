@@ -3,63 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hosturi Minecraft Gratuite</title>
+    <title>Minehant - Hosting Minecraft Gratuit</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #1e1e1e;
+            background-color: #121212;
             color: white;
             margin: 0;
             padding: 0;
         }
         header {
-            background: #2ecc71;
-            padding: 20px;
             text-align: center;
+            padding: 30px;
+            background: linear-gradient(90deg, #00ff99, #00ccff);
         }
-        h1 {
+        header h1 {
             margin: 0;
+            font-size: 2.5rem;
         }
-        main {
-            padding: 20px;
+        header p {
+            margin: 5px 0 0;
         }
         .host {
-            background: #2c2c2c;
-            padding: 15px;
+            max-width: 700px;
+            margin: 20px auto;
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .host img {
+            max-width: 200px;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            background: #00ff99;
+            color: black;
+            padding: 10px 20px;
             border-radius: 8px;
-            margin-bottom: 15px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
-        a {
-            color: #2ecc71;
             text-decoration: none;
+            font-weight: bold;
         }
-        a:hover {
-            text-decoration: underline;
+        .btn:hover {
+            background: #00cc77;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #1f1f1f;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>🌍 Hosturi Minecraft Gratuite</h1>
-        <p>Listă actualizată cu cele mai bune opțiuni</p>
+        <h1>🌍 Minehant</h1>
+        <p>Hosting Minecraft Gratuit și Rapid</p>
     </header>
-    <main>
-        <div class="host">
-            <h2>Aternos</h2>
-            <p>Host gratuit pentru servere Minecraft, ușor de folosit.</p>
-            <p><a href="https://aternos.org/" target="_blank">Vizitează site-ul</a></p>
-        </div>
-        <div class="host">
-            <h2>FalixNodes</h2>
-            <p>Oferă hosting Minecraft gratuit cu panou de control.</p>
-            <p><a href="https://falixnodes.net/" target="_blank">Vizitează site-ul</a></p>
-        </div>
-        <div class="host">
-            <h2>Minehut</h2>
-            <p>Host gratuit cu până la 10 jucători și pluginuri.</p>
-            <p><a href="https://minehut.com/" target="_blank">Vizitează site-ul</a></p>
-        </div>
-    </main>
+
+    <div class="host">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Minecraft_cover.png" alt="Minehant Logo">
+        <h2>Despre Minehant</h2>
+        <p>Minehant este un serviciu gratuit de găzduire pentru servere Minecraft, ideal pentru prieteni și comunități mici. 
+        Oferim panou de control modern, instalare rapidă și suport pentru pluginuri și modpack-uri.</p>
+        <a href="#" class="btn">Creează-ți Serverul</a>
+    </div>
+
+    <footer>
+        📧 Contact: minehant.support@example.com
+    </footer>
 </body>
 </html>
