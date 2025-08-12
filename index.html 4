@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minehant - Hosting Minecraft Gratuit</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(180deg, #0b0c0d, #0f1113);
+      color: #e6eef3;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+      background: linear-gradient(90deg, #00cc77, #00a88a);
+      color: #03120b;
+    }
+    header img {
+      height: 70px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #03120b;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    .hero {
+      padding: 50px 20px;
+    }
+    .hero h1 {
+      font-size: 36px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #9aa3ad;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #00cc77;
+      color: #03120b;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      box-shadow: 0 6px 18px rgba(0, 204, 119, 0.2);
+    }
+    footer {
+      padding: 15px;
+      font-size: 14px;
+      color: #9aa3ad;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="images/minehant-logo.png" alt="Minehant Logo">
+  <nav>
+    <a href="index.html" class="active">Acasă</a>
+    <a href="planuri.html">Planuri</a>
+    <a href="despre.html">Despre</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Bun venit la Minehant</h1>
+  <p>Hosting Minecraft gratuit — de la 1GB până la 5000GB RAM, totul fără costuri.</p>
+  <a class="btn" href="planuri.html">Vezi planurile</a>
+</div>
+
+<footer>
+  © 2025 Minehant - Toate drepturile rezervate.
+</footer>
+
+</body>
+</html>
